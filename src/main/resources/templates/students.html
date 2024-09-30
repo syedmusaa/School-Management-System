@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="school.css">
+</head>
+<body>
+    <header>
+        <h1>Student Management</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="teachers.html">Teachers</a>
+            <a href="courses.html">Courses</a>
+            <a href="enrollment.html">Enrollment</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Register New Student</h2>
+        <form>
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" name="studentName" required>
+
+            <label for="studentAge">Age:</label>
+            <input type="number" id="studentAge" name="studentAge" required>
+
+            <label for="studentClass">Class:</label>
+            <input type="text" id="studentClass" name="studentClass" required>
+			
+			<label for="studentEmail">Email:</label>
+			<input type="text" id="studentEmail" name="studentEmail" required>
+			
+			<label for="studentContactDetails">Contact Details:</label>
+		    <input type="text" id="studentContactDetails" name="studentContactDetails" required>
+						
+            <input type="submit" value="Register">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 School Management System</p>
+    </footer>
+</body>
+</html>

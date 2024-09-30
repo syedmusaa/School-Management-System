@@ -23,6 +23,7 @@ public class StudentController {
     public Student getStudentById(@PathVariable long id) {
         return studentService.getStudentById(id);
     }
+    
 
     // Create a new student
     @PostMapping ("/registration")

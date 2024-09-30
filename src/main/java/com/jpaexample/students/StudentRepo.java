@@ -109,7 +109,7 @@ public class StudentRepo {
     public Student getStudentById(long id) {
         return entityManager.find(Student.class, id);
     }
-
+    
     public void saveStudent(Student student) {
         entityManager.merge(student);
     }
