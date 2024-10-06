@@ -1,4 +1,4 @@
-package com.jpaexample.courses;
+package com.jpaexample.html.courses;
 
 import java.util.List;
 

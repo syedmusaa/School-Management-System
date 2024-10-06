@@ -1,4 +1,4 @@
-package com.jpaexample.students;
+package com.jpaexample.html.students;
 
 import java.util.List;
 
@@ -11,32 +11,32 @@ import org.springframework.stereotype.Service;
 public class StudentService {
 
     @Autowired
-    private StudentRepo StudentRepository;
+    private StudentRepo studentRepository;
     
     public void run(String... args) throws Exception {
         // Insert customers
     
-    	StudentRepository.insert(new Student(1, "Vikram Chauhan", 33, "vikram.chauhan@example.com", 12, 706715875));}
+    	studentRepository.insert(new Student(1, "Vikram Chauhan", 33, "vikram.chauhan@example.com", 12, 706715875));}
     
     	public List<Student> getAllStudents() {
-            return StudentRepository.getAllStudents();
+            return studentRepository.getAllStudents();
         }
 
         public Student getStudentById(long id) {
-            return StudentRepository.getStudentById(id);
+            return studentRepository.getStudentById(id);
         }
         
         
 
         public void saveStudent(Student student) {
-        	StudentRepository.saveStudent(student);
+        	studentRepository.saveStudent(student);
         }
 
         public void updateStudent(Student student) {
-        	StudentRepository.updateStudent(student);
+        	studentRepository.updateStudent(student);
         }
 
         public void deleteStudent(long id) {
-        	StudentRepository.deleteStudent(id);
+        	studentRepository.deleteStudent(id);
         }
     }

@@ -1,4 +1,4 @@
-package com.jpaexample.courses;
+package com.jpaexample.html.courses;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

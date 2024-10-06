@@ -81,7 +81,7 @@
 ////	}
 //}
 //}
-package com.jpaexample.students;
+package com.jpaexample.html.teachers;
 
 import java.util.List;
 
@@ -93,35 +93,35 @@ import jakarta.transaction.Transactional;
 
 @Repository
 @Transactional
-public class StudentRepo {
+public class TeacherRepo {
 
     @PersistenceContext
     private EntityManager entityManager;
     
-    public void insert(Student student) {
-        entityManager.merge(student); // Use merge to insert or update
+    public void insert(Teacher teacher) {
+        entityManager.merge(teacher); // Use merge to insert or update
     }
 
-    public List<Student> getAllStudents() {
-        return entityManager.createQuery("SELECT s FROM Student s", Student.class).getResultList();
+    public List<Teacher> getAllTeachers() {
+        return entityManager.createQuery("SELECT t FROM Teacher t", Teacher.class).getResultList();
     }
 
-    public Student getStudentById(long id) {
-        return entityManager.find(Student.class, id);
-    }
-    
-    public void saveStudent(Student student) {
-        entityManager.merge(student);
+    public Teacher getTeacherById(long id) {
+        return entityManager.find(Teacher.class, id);
     }
 
-    public void updateStudent(Student student) {
-        entityManager.merge(student);
+    public void saveTeacher(Teacher teacher) {
+        entityManager.merge(teacher);
     }
 
-    public void deleteStudent(long id) {
-    	Student student = entityManager.find(Student.class, id);
-        if (student != null) {
-            entityManager.remove(student);
+    public void updateTeacher(Teacher teacher) {
+        entityManager.merge(teacher);
+    }
+
+    public void deleteTeacher(long id) {
+    	Teacher teacher = entityManager.find(Teacher.class, id);
+        if (teacher != null) {
+            entityManager.remove(teacher);
         }
     }
 }

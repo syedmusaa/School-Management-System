@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="school.css">
 </head>
 <body>
+    <script src="App.js"></script>
     <header>
         <h1>Student Management</h1>
         <nav>
@@ -19,22 +20,26 @@
 
     <main>
         <h2>Register New Student</h2>
-        <form>
-            <label for="studentName">Student Name:</label>
-            <input type="text" id="studentName" name="studentName" required>
-
-            <label for="studentAge">Age:</label>
-            <input type="number" id="studentAge" name="studentAge" required>
-
-            <label for="studentClass">Class:</label>
-            <input type="text" id="studentClass" name="studentClass" required>
+        <form action="register" method="post">
 			
-			<label for="studentEmail">Email:</label>
-			<input type="text" id="studentEmail" name="studentEmail" required>
+			<label for="firstname">First name :</label> <br/>
+			<input type="text" name="fname"/> <br/>
 			
-			<label for="studentContactDetails">Contact Details:</label>
-		    <input type="text" id="studentContactDetails" name="studentContactDetails" required>
-						
+            <label for="studentName">Student Name:</label> <br/>
+            <input type="text" name="studentName"/> <br/>
+
+            <label for="studentAge">Age:</label> <br/>
+            <input type="number" name="studentAge"/> <br/>
+
+            <label for="studentClass">Class:</label> <br/>
+            <input type="text" id="studentClass" name="studentClass" required> <br/>
+
+            <label for="studentEmail">Email:</label> <br/>
+			<input type="text" name="studentEmail"/> <br/>
+			
+			<label for="studentContactDetails">Contact Details:</label> <br/>
+		    <input type="text" name="studentContactDetails"> <br/>
+
             <input type="submit" value="Register">
         </form>
     </main>

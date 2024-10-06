@@ -1,4 +1,4 @@
-package com.jpaexample.teachers;
+package com.jpaexample.html.teachers;
 
 import java.util.List;
 

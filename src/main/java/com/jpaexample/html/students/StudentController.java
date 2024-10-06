@@ -1,4 +1,4 @@
-package com.jpaexample.students;
+package com.jpaexample.html.students;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -26,7 +26,7 @@ public class StudentController {
     
 
     // Create a new student
-    @PostMapping ("/registration")
+    @PostMapping ("/register")
     public void saveStudent(@RequestBody Student student) {
     	studentService.saveStudent(student);
     }

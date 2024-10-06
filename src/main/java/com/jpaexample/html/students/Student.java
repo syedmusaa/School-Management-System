@@ -1,4 +1,4 @@
-package com.jpaexample.students;
+package com.jpaexample.html.students;
 
 
 import jakarta.persistence.Column;
