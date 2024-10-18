@@ -1,4 +1,4 @@
-package com.jpaexample.html.courses;
+package com.jpaexample.Entities;
 
 
 import jakarta.persistence.Column;
@@ -7,20 +7,24 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table (name = "Course_info")
+@Table (name = "course_info")
 public class Course {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column (name = "Course_id")
 	private long id;
 	@Column (name = "Title")
 	private String title;
 	@Column (name = "Course_description")
 	private String description;
+	
+	@OneToOne(mappedBy = "course")   
+    private Student student;
+	//private Teacher teacher;
 	
 	public Course() {
 	}

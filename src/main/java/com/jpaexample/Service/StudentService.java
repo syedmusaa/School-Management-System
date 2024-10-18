@@ -1,4 +1,4 @@
-package com.jpaexample.html.students;
+package com.jpaexample.Service;
 
 import java.util.List;
 
@@ -6,6 +6,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.jpaexample.Entities.Student;
+import com.jpaexample.Repositories.StudentRepo;
 
 @Service
 public class StudentService {
@@ -16,7 +19,7 @@ public class StudentService {
     public void run(String... args) throws Exception {
         // Insert customers
     
-    	studentRepository.insert(new Student(1, "Vikram Chauhan", 33, "vikram.chauhan@example.com", 12, 706715875));}
+    	}
     
     	public List<Student> getAllStudents() {
             return studentRepository.getAllStudents();

@@ -1,7 +1,10 @@
-package com.jpaexample.html.students;
+package com.jpaexample.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import com.jpaexample.Entities.Student;
+import com.jpaexample.Service.StudentService;
 
 import java.util.List;
 

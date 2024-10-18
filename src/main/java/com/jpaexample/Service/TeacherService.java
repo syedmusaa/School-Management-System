@@ -1,4 +1,4 @@
-package com.jpaexample.html.teachers;
+package com.jpaexample.Service;
 
 import java.util.List;
 
@@ -6,6 +6,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.jpaexample.Entities.Teacher;
+import com.jpaexample.Repositories.TeacherRepo;
 
 @Service
 public class TeacherService {

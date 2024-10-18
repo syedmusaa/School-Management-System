@@ -81,11 +81,13 @@
 ////	}
 //}
 //}
-package com.jpaexample.html.students;
+package com.jpaexample.Repositories;
 
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
+
+import com.jpaexample.Entities.Student;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;

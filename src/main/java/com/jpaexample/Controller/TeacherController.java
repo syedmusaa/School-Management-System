@@ -1,7 +1,10 @@
-package com.jpaexample.html.teachers;
+package com.jpaexample.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import com.jpaexample.Entities.Teacher;
+import com.jpaexample.Service.TeacherService;
 
 import java.util.List;
 
@@ -25,7 +28,7 @@ public class TeacherController {
     }
 
     // Create a new student
-    @PostMapping ("/registration")
+    @PostMapping ("/register")
     public void saveTeacher(@RequestBody Teacher teacher) {
     	teacherService.saveTeacher(teacher);
     }

@@ -1,4 +1,4 @@
-package com.jpaexample.html;
+package com.jpaexample;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

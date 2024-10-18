@@ -1,5 +1,8 @@
-package com.jpaexample.html.students;
+package com.jpaexample.Entities;
 
+
+
+import jakarta.persistence.CascadeType;
 
 import jakarta.persistence.Column;
 
@@ -7,15 +10,19 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
-
+import lombok.*;
+@Data
+@AllArgsConstructor
 @Entity
-@Table (name = "Student_info")
+@Table (name = "student_info")
 public class Student {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column (name = "Student_id")
+	//@Column (name = "Student_id")
 	private long id;
 	@Column (name = "Student_name")
 	private String name;
@@ -27,13 +34,18 @@ public class Student {
 	private String email;
 	@Column (name = "Student_contact_details")
 	private long contact;
+	
+	 @OneToOne(cascade  = CascadeType.ALL)
+	    @JoinColumn(name = "course_id")
+	    private Course course;
+	
 
 	public Student() {
 	}
 	
 	
 	
-	public Student(long id, String name, int age, String email, int class_name, long contact) {
+	public Student(long id, String name, int age, String email, int class_name, long contact, Course course) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -41,6 +53,7 @@ public class Student {
 		this.email = email;
 		this.class_name = class_name;
 		this.contact = contact;
+		this.course =course;
 	}
 
 
@@ -112,12 +125,19 @@ public class Student {
 	public void setContact(long contact) {
 		this.contact = contact;
 	}
+	
+	public Course getCourse() {
+		return course;
+	}
 
+	public void setCourse(Course course) {
+		this.course = course;
+	}
 
 
 	@Override
 	public String toString() {
-		return "Customer [id=" + id + ", name=" + name + ", age=" + age + ", email=" + email + ", class_name=" + class_name + ", contact=" + contact + "]";
+		return "Student [id=" + id + ", name=" + name + ", age=" + age + ", email=" + email + ", class_name=" + class_name + ", contact=" + contact + ", course=" + course +"]";
 	}
 	
 	

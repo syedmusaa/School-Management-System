@@ -1,0 +1,37 @@
+http://localhost:8081/students/register
+{
+  "name" : "Syed Musa Ali",
+  "age" :18,
+  "class_name" :12,
+  "email" : "syedmusaali70@gmail.com",
+  "contact" :7067158758,
+  "course" : {
+  "id" : 1
+}
+}
+
+
+
+
+http://localhost:8081/courses/add
+
+{
+  "title" : "Biology",
+  "description" : "Human Anatomy"
+}
+
+
+
+
+http://localhost:8081/teachers/register
+
+{
+  "name" : "Swati Shrivastav",
+  "age" :32,
+  "email" : "swati_1234@gmail.com",
+  "contact" :8206358793,
+  "specialization" : "Human physiology",
+  "course" : {
+  "id" : 2
+}
+}

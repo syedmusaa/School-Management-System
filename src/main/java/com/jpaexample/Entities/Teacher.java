@@ -1,21 +1,25 @@
-package com.jpaexample.html.teachers;
+package com.jpaexample.Entities;
 
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
+
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table (name = "Teacher_info")
+@Table (name = "teacher_info")
 public class Teacher {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column (name = "Teacher_id")
+	//@Column (name = "Teacher_id")
 	private long id;
 	@Column (name = "Teacher_name")
 	private String name;
@@ -27,6 +31,11 @@ public class Teacher {
 	private long contact;
 	@Column (name = "Teacher_specialization")
     private String specialization;
+	
+//	 @OneToOne(cascade  = CascadeType.ALL)
+//	 @JoinColumn(name = "course_id")
+//	 private Course course;
+		
 
 	public Teacher() {
 	}
